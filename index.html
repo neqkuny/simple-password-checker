@@ -1,23 +1,35 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Password Strength Checker - Secure Password Validator</title>
-    <meta name="description" content="Free password strength checker tool. Validate your password security with real-time feedback on strength criteria including length, characters, and complexity." />
-    <meta name="author" content="Password Strength Checker" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Simple Password Checker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Simple Password Checker</h1>
 
-    <meta property="og:title" content="Password Strength Checker - Secure Password Validator" />
-    <meta property="og:description" content="Free password strength checker tool with real-time validation and security feedback." />
-    <meta property="og:type" content="website" />
-    <!-- Social image and twitter tags removed -->
-    <!-- Favicon: prefer SVG for crisp scaling, fall back to /favicon.ico -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-  </head>
+    <label for="password">Enter password</label>
+    <input id="password" type="password" placeholder="Type a password" />
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <div id="strength" class="meter">
+      <div id="strength-bar" class="bar"></div>
+    </div>
+    <p id="score">Strength: <strong id="score-text">0 / 5</strong></p>
+
+    <ul id="checks" class="checks">
+      <li id="len">At least 8 characters</li>
+      <li id="lower">Lowercase letter</li>
+      <li id="upper">Uppercase letter</li>
+      <li id="digit">Number</li>
+      <li id="symbol">Symbol (e.g. !@#)</li>
+    </ul>
+
+    <!-- bottom note removed as requested -->
+    <div id="confetti" aria-hidden="true"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
 </html>
