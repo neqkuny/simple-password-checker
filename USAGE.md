@@ -141,3 +141,23 @@ This tool runs entirely in your browser. No passwords are sent to any server or 
 
 ## License
 Free to use for personal and commercial projects.
+
+## Deploy to a static host
+
+If you want to host a static copy of this app on any static host that accepts a ZIP of files, use the included `site/` folder which contains a standalone vanilla JS version:
+
+1. From the project root, create a zip of the `site/` folder with files placed at the archive root (recommended):
+
+```bash
+# from project root
+cd site
+zip -r ../site.zip .
+```
+
+2. Upload the generated `site.zip` to your static host (their upload may expect a zip of static files).
+
+3. The host will serve the files at the root — no build step required.
+
+Notes:
+- The `site/` folder is intentionally a small, prebuilt vanilla JS version of the password checker so you can upload it directly without running `npm run build`.
+- If you'd rather upload the Vite build output, run `npm run build` and upload the contents of the `dist/` folder instead.
