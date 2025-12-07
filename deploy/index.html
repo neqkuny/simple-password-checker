@@ -13,7 +13,18 @@
     <label for="password">Enter password</label>
     <div class="input-row">
       <input id="password" type="password" placeholder="Type a password" aria-label="Password" />
-      <button id="toggleShow" class="toggle-btn" aria-pressed="false" aria-label="Show password">Show</button>
+      <button id="toggleShow" class="toggle-btn" aria-pressed="false" aria-label="Toggle password visibility">
+        <!-- eye (visible) -->
+        <svg class="icon eye" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <!-- eye-off (hidden) -->
+        <svg class="icon eye-off" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M17.94 17.94A10.94 10.94 0 0 1 12 19c-6 0-10-7-10-7a20.6 20.6 0 0 1 5.22-4.91" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M1 1l22 22" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
     </div>
 
     <div id="strength" class="meter">

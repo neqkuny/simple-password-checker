@@ -12,16 +12,24 @@ const checks = {
 // show/hide toggle
 const toggleBtn = document.getElementById('toggleShow');
 if (toggleBtn) {
+  const eye = toggleBtn.querySelector('.eye');
+  const eyeOff = toggleBtn.querySelector('.eye-off');
+  // initialize icons
+  if (eye) eye.style.display = 'block';
+  if (eyeOff) eyeOff.style.display = 'none';
+
   toggleBtn.addEventListener('click', () => {
     const current = pw.getAttribute('type');
     if (current === 'password') {
       pw.setAttribute('type','text');
-      toggleBtn.textContent = 'Hide';
       toggleBtn.setAttribute('aria-pressed','true');
+      if (eye) eye.style.display = 'none';
+      if (eyeOff) eyeOff.style.display = 'block';
     } else {
       pw.setAttribute('type','password');
-      toggleBtn.textContent = 'Show';
       toggleBtn.setAttribute('aria-pressed','false');
+      if (eye) eye.style.display = 'block';
+      if (eyeOff) eyeOff.style.display = 'none';
     }
   });
 }
