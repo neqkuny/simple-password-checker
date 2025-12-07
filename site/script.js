@@ -9,6 +9,23 @@ const checks = {
   symbol: document.getElementById('symbol')
 };
 
+// show/hide toggle
+const toggleBtn = document.getElementById('toggleShow');
+if (toggleBtn) {
+  toggleBtn.addEventListener('click', () => {
+    const current = pw.getAttribute('type');
+    if (current === 'password') {
+      pw.setAttribute('type','text');
+      toggleBtn.textContent = 'Hide';
+      toggleBtn.setAttribute('aria-pressed','true');
+    } else {
+      pw.setAttribute('type','password');
+      toggleBtn.textContent = 'Show';
+      toggleBtn.setAttribute('aria-pressed','false');
+    }
+  });
+}
+
 function evaluate(value) {
   let score = 0;
   const tests = {

@@ -11,7 +11,10 @@
     <h1>Simple Password Checker</h1>
 
     <label for="password">Enter password</label>
-    <input id="password" type="password" placeholder="Type a password" />
+    <div class="input-row">
+      <input id="password" type="password" placeholder="Type a password" aria-label="Password" />
+      <button id="toggleShow" class="toggle-btn" aria-pressed="false" aria-label="Show password">Show</button>
+    </div>
 
     <div id="strength" class="meter">
       <div id="strength-bar" class="bar"></div>
