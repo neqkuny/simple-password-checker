@@ -1,4 +1,4 @@
-:root{--bg:#0f172a;--card:#0b1220;--accent:#7c3aed;--good:#16a34a;--warn:#f59e0b;--bad:#ef4444}
+:root{--bg:#071023;--card:#071428;--accent:#8b5cf6;--good:#10b981;--warn:#f97316;--bad:#ef4444;--muted:#a3b0d6}
 *{box-sizing:border-box;font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial}
 html,body{height:100%}
 body{margin:0;background:linear-gradient(180deg,#071129 0%,#0f172a 100%);color:#e6eef8;display:flex;align-items:center;justify-content:center;padding:32px}
@@ -50,8 +50,11 @@ body::before{
 
 /* input row + toggle */
 .input-row{display:flex;gap:8px;align-items:center;margin-top:6px}
-.toggle-btn{background:transparent;border:1px solid rgba(255,255,255,0.06);color:inherit;padding:8px 10px;border-radius:8px;cursor:pointer;font-size:13px}
-.toggle-btn[aria-pressed="true"]{background:rgba(255,255,255,0.04);}
+.toggle-btn{background:rgba(255,255,255,0.04);color:var(--card);border:none;width:38px;height:38px;display:inline-flex;align-items:center;justify-content:center;border-radius:999px;cursor:pointer;transition:transform .12s ease,background-color .12s ease}
+.toggle-btn:active{transform:scale(.96)}
+.toggle-btn .icon{color:var(--muted)}
+.toggle-btn[aria-pressed="true"]{background:var(--accent)}
+.toggle-btn[aria-pressed="true"] .icon{color:#fff}
 
 /* subtitle and helper */
 .subtitle{color:#9fb7d6;font-size:13px;margin-bottom:8px}
